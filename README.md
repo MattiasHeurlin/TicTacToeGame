@@ -1,21 +1,31 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/XOvGiyhD)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11252829&assignment_repo_type=AssignmentRepo)
-# Inlämningsuppgift Tre-i-rad
+TicTacToe - Vue.js Assignment
 
-Denna mall innehåller ett tomt vue-projekt baserat på typescript. Er uppgift är att skapa spelet tre-i-rad med hjälp av denna mall. Eftersom ni inte har någonting att utgå ifrån så har ni fria händer att skapa just er unika lösning.
+Welcome to TicTacToe, a fun, colorful, and interactive version of the classic game. This project is built using Vue.js and is intended to demonstrate a practical application of the Vue.js framework, specifically using Vue 3's Composition API.
+Features
 
-## Betyg G
+    Players can select their unique names and colors.
+    The game maintains a history of all past games.
+    The score is maintained for each player across games.
+    Built using Vue.js 3 with the Composition API.
 
-- Kunna ange spelarnamn för X respektive O
-- Kunna spela ett spel och få en vinnare/oavgjort
-- Inte kunna göra fler drag efter spelet är slut
-- Kunna starta ett nytt spel
-- Använda minst en komponent
+Getting Started
 
-## Betyg VG
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Prerequisites
 
-- Använda minst tre komponenter för er lösning
-- Spara poänghistorik för spelarna
-- Kunna visa poängstatistiken
-- Kunna stänga webbläsaren och komma tillbaka där spelet avbröts
-- Kunna nollställa statistik och börja om med nya spelare
+
+Install dependencies:
+
+npm install
+
+Run the application in development mode:
+
+    npm run dev
+
+Usage
+
+    Player 1 and Player 2 choose their unique names and colors.
+    Players then take turns clicking on an empty square on the grid to place their mark.
+    The first player to get 3 of their marks in a row (up, down, across, or diagonally) is the winner.
+    In case the grid is filled up without any player winning, the game is considered a draw.
+    Scores and history of the games are stored locally and are available to view even after reloading the page.
