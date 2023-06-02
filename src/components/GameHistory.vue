@@ -102,7 +102,7 @@ function historyClear() {
       </ul>
 
       <div  v-if="!state.noHistory">
-        <h3 class="text-center text-2xl mb-2 text-info">Winning Rate per Player:</h3>
+        <h3 class="text-center text-2xl mb-2 text-info">Highscore:</h3>
         <ul class="flex flex-col  gap-2">
           <li class="flex rateContainer justify-between w-24" v-for="player in winningRate">
             <p class="text-success">{{ player.player }}</p>
