@@ -24,12 +24,12 @@ const props = defineProps({
       settings: {
         draw: boolean;
       };
-    },
+    } | null,
     required: false,
   },
 });
 const currentlySelecting = ref(1);
-const emit = defineEmits(["game-over","draw", "goBack-fromGame"]);
+const emit = defineEmits(["game-over", "draw", "goBack-fromGame"]);
 export interface GameSession {
   players: Players[];
   boxLayout: number[];
@@ -63,8 +63,8 @@ const winningCombinations = [
 ];
 
 onMounted(() => {
-    console.log('mounted')
-    console.log(props.alreadyActiveGame)
+  console.log("mounted");
+  console.log(props.alreadyActiveGame);
   loadGame();
 });
 function saveCurrentStateOfGame() {
@@ -73,8 +73,8 @@ function saveCurrentStateOfGame() {
 
 function loadGame() {
   if (props.alreadyActiveGame) {
-    console.log("loading game")
-    console.log(props.alreadyActiveGame)
+    console.log("loading game");
+    console.log(props.alreadyActiveGame);
     gameSession.players = props.alreadyActiveGame.players;
     gameSession.boxLayout = props.alreadyActiveGame.boxLayout;
     gameSession.moveHistory = props.alreadyActiveGame.moveHistory;
@@ -84,7 +84,7 @@ function loadGame() {
       gameSession.moveHistory.player2.length
         ? 2
         : 1;
-    console.log(gameSession)
+    console.log(gameSession);
   }
 }
 
@@ -149,13 +149,12 @@ function saveGame(playerWhoWon: string) {
 }
 
 function goBack() {
-    sessionStorage.removeItem("gameSession");
+  sessionStorage.removeItem("gameSession");
   emit("goBack-fromGame");
 }
 </script>
 
 <template>
-    
   <main>
     <h2 class="text-center m-4 text-xl">
       Your turn:
@@ -194,15 +193,16 @@ function goBack() {
           O
         </div>
       </div>
-      
-    </section> 
-    <button class="btn btn-outline btn-error w-40 center" @click="goBack" >RETURN</button>
+    </section>
+    <button class="btn btn-outline btn-error w-40 center" @click="goBack">
+      RETURN
+    </button>
   </main>
 </template>
 
 <style scoped>
 .center {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .gameContainer {
   display: grid;
